@@ -1,0 +1,10 @@
+lb x11, 24(x0)
+loop:
+lb x10, 1025(x0) 
+sb x10, 1024(x0)
+beq x10, x11, exit
+jal x0, loop
+
+exit: halt
+
+byte: .byte '*'
